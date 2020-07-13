@@ -14,6 +14,7 @@
     "Taxonomic identifier": {
         "NCBI": 2697049
     },
+    "Family": "",
     "Taxonomic lineage": "Viruses > Riboviria > Nidovirales > Cornidovirineae > Coronaviridae > Orthocoronavirinae > Betacoronavirus > Sarbecovirus",
     "Virus host": "Homo sapiens (Human)",
     "Proteomes": "UP000464024 Component: Genome",
@@ -24,14 +25,11 @@
         "Interpro": ["IPR002552 Corona_S2", "IPR027400 S_HR2", "IPR018548 Spike_rcpt-bd", "IPR036326 Spike_rcpt-bd_sf"]
     },
     "Cellular component": ["Host cell membrane", "Host membrane", "Membrane", "Viral envelope protein", "Virion"],
-    "Protein-protein interactions": {
-        "ComplexPortal": "CPX-5682 SARS-CoV-2 Spike protein complex",
-        "IntAct": "P0DTC2, 3 interactors"
-    },
-    "Transmembrane position": "1214 – 1234",
+    "Hydrophobic position": "1214 – 1234",
     "Transmembrane description": "Helical",
     "Chains": ["A", "B", "C"],
     "Resolution": 2.8,
+    "PDB structure": 
     "TMDomain": "",
     "HPDomain": "",
     "Stalk": "TMDomain + HPDomain"
