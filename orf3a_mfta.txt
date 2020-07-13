@@ -1,0 +1,280 @@
+name: SARS-CoV-2 open reading frame 3a				
+pdb id: none				
+# other comments/remarks go here				
+				
+seqnum	chain	res	topo	domain
+1	A	M	O	
+2	A	D	O	
+3	A	L	O	
+4	A	F	O	
+5	A	M	O	
+6	A	R	O	
+7	A	I	O	
+8	A	F	O	
+9	A	T	O	
+10	A	I	O	
+11	A	G	O	
+12	A	T	O	
+13	A	V	O	
+14	A	T	O	
+15	A	L	O	
+16	A	K	O	
+17	A	Q	O	
+18	A	G	O	
+19	A	E	O	
+20	A	I	O	
+21	A	K	O	
+22	A	D	O	
+23	A	A	O	
+24	A	T	O	
+25	A	P	O	
+26	A	S	O	
+27	A	D	O	
+28	A	F	O	
+29	A	V	O	
+30	A	R	O	
+31	A	A	O	
+32	A	T	O	
+33	A	A	O	
+34	A	T	M	TM1
+35	A	I	M	TM1
+36	A	P	M	TRAF3_bind
+37	A	I	M	TRAF3_bind
+38	A	Q	M	TRAF3_bind
+39	A	A	M	TRAF3_bind
+40	A	S	M	TRAF3_bind
+41	A	L	M	TM1
+42	A	P	M	TM1
+43	A	F	M	TM1
+44	A	G	M	TM1
+45	A	W	M	TM1
+46	A	L	M	TM1
+47	A	I	M	TM1
+48	A	V	M	TM1
+49	A	G	M	TM1
+50	A	V	M	TM1
+51	A	A	M	TM1
+52	A	L	M	TM1
+53	A	L	M	TM1
+54	A	A	M	TM1
+55	A	V	M	TM1
+56	A	F	M	TM1
+57	A	Q	I	
+58	A	S	I	
+59	A	A	I	
+60	A	S	I	
+61	A	K	I	
+62	A	I	I	
+63	A	I	I	
+64	A	T	I	
+65	A	L	I	
+66	A	K	I	
+67	A	K	I	
+68	A	R	I	
+69	A	W	I	caveolin
+70	A	Q	I	caveolin
+71	A	L	I	caveolin
+72	A	A	I	caveolin
+73	A	L	I	caveolin
+74	A	S	I	caveolin
+75	A	K	I	caveolin
+76	A	G	I	caveolin
+77	A	V	M	TM2
+78	A	H	M	TM2
+79	A	F	M	TM2
+80	A	V	M	TM2
+81	A	C	M	TM2
+82	A	N	M	TM2
+83	A	L	M	TM2
+84	A	L	M	TM2
+85	A	L	M	TM2
+86	A	L	M	TM2
+87	A	F	M	TM2
+88	A	V	M	TM2
+89	A	T	M	TM2
+90	A	V	M	TM2
+91	A	Y	M	TM2
+92	A	S	M	TM2
+93	A	H	M	TM2
+94	A	L	M	TM2
+95	A	L	M	TM2
+96	A	L	M	TM2
+97	A	V	M	TM2
+98	A	A	M	TM2
+99	A	A	M	TM2
+100	A	G	O	
+101	A	L	O	
+102	A	E	O	
+103	A	A	O	
+104	A	P	O	
+105	A	F	M	TM3
+106	A	L	M	TM3
+107	A	Y	M	TM3
+108	A	L	M	TM3
+109	A	Y	M	TM3
+110	A	A	M	TM3
+111	A	L	M	TM3
+112	A	V	M	TM3
+113	A	Y	M	TM3
+114	A	F	M	TM3
+115	A	L	M	TM3
+116	A	Q	M	TM3
+117	A	S	M	TM3
+118	A	I	M	TM3
+119	A	N	M	TM3
+120	A	F	M	TM3
+121	A	V	M	TM3
+122	A	R	M	TM3
+123	A	I	M	TM3
+124	A	I	M	TM3
+125	A	M	M	TM3
+126	A	R	I	
+127	A	L	I	dimer
+128	A	W	I	dimer
+129	A	L	I	dimer
+130	A	C	I	dimer
+131	A	W	I	dimer
+132	A	K	I	dimer
+133	A	C	I	dimer
+134	A	R	I	
+135	A	S	I	
+136	A	K	I	
+137	A	N	I	
+138	A	P	I	
+139	A	L	I	
+140	A	L	I	caveolin
+141	A	Y	I	caveolin
+142	A	D	I	caveolin
+143	A	A	I	caveolin
+144	A	N	I	caveolin
+145	A	Y	I	caveolin
+146	A	F	I	caveolin
+147	A	L	I	caveolin
+148	A	C	I	caveolin
+149	A	W	I	caveolin
+150	A	H	I	
+151	A	T	I	
+152	A	N	I	
+153	A	C	I	
+154	A	Y	I	
+155	A	D	I	
+156	A	Y	I	
+157	A	C	I	
+158	A	I	I	
+159	A	P	I	
+160	A	Y	I	clathrin
+161	A	N	I	clathrin
+162	A	S	I	clathrin
+163	A	V	I	clathrin
+164	A	T	I	
+165	A	S	I	
+166	A	S	I	
+167	A	I	I	
+168	A	V	I	
+169	A	I	I	
+170	A	T	I	
+171	A	S	I	
+172	A	G	I	
+173	A	D	I	
+174	A	G	I	
+175	A	T	I	
+176	A	T	I	
+177	A	S	I	
+178	A	P	I	
+179	A	I	I	
+180	A	S	I	
+181	A	E	I	
+182	A	H	I	
+183	A	D	I	
+184	A	Y	I	
+185	A	Q	I	
+186	A	I	I	
+187	A	G	I	
+188	A	G	I	
+189	A	Y	I	
+190	A	T	I	
+191	A	E	I	
+192	A	K	I	
+193	A	W	I	
+194	A	E	I	
+195	A	S	I	
+196	A	G	I	
+197	A	V	I	
+198	A	K	I	
+199	A	D	I	
+200	A	C	I	
+201	A	V	I	
+202	A	V	I	
+203	A	L	I	
+204	A	H	I	
+205	A	S	I	
+206	A	Y	I	
+207	A	F	I	
+208	A	T	I	
+209	A	S	I	RNA_bind
+210	A	D	I	RNA_bind
+211	A	Y	I	RNA_bind
+212	A	Y	I	RNA_bind
+213	A	Q	I	RNA_bind
+214	A	L	I	RNA_bind
+215	A	Y	I	RNA_bind
+216	A	S	I	RNA_bind
+217	A	T	I	RNA_bind
+218	A	Q	I	RNA_bind
+219	A	L	I	RNA_bind
+220	A	S	I	RNA_bind
+221	A	T	I	RNA_bind
+222	A	D	I	RNA_bind
+223	A	T	I	RNA_bind
+224	A	G	I	RNA_bind
+225	A	V	I	RNA_bind
+226	A	E	I	RNA_bind
+227	A	H	I	RNA_bind
+228	A	V	I	RNA_bind
+229	A	T	I	RNA_bind
+230	A	F	I	RNA_bind
+231	A	F	I	RNA_bind
+232	A	I	I	RNA_bind
+233	A	Y	I	RNA_bind
+234	A	N	I	RNA_bind
+235	A	K	I	RNA_bind
+236	A	I	I	RNA_bind
+237	A	V	I	RNA_bind
+238	A	D	I	RNA_bind
+239	A	E	I	RNA_bind
+240	A	P	I	RNA_bind
+241	A	E	I	RNA_bind
+242	A	E	I	RNA_bind
+243	A	H	I	RNA_bind
+244	A	V	I	RNA_bind
+245	A	Q	I	RNA_bind
+246	A	I	I	RNA_bind
+247	A	H	I	RNA_bind
+248	A	T	I	RNA_bind
+249	A	I	I	RNA_bind
+250	A	D	I	RNA_bind
+251	A	G	I	RNA_bind
+252	A	S	I	RNA_bind
+253	A	S	I	RNA_bind
+254	A	G	I	RNA_bind
+255	A	V	I	RNA_bind
+256	A	V	I	RNA_bind
+257	A	N	I	RNA_bind
+258	A	P	I	RNA_bind
+259	A	V	I	RNA_bind
+260	A	M	I	RNA_bind
+261	A	E	I	RNA_bind
+262	A	P	I	RNA_bind
+263	A	I	I	RNA_bind
+264	A	Y	I	RNA_bind
+265	A	D	I	
+266	A	E	I	
+267	A	P	I	
+268	A	T	I	
+269	A	T	I	
+270	A	T	I	
+271	A	T	I	
+272	A	S	I	
+273	A	V	I	
+274	A	P	I	
+275	A	L	I	
