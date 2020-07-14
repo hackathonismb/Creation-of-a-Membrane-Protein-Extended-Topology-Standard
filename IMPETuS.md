@@ -23,15 +23,15 @@ is built to cover complex cases such as proteins with "stalk" regions - transmem
 
 More detailed instructions coming soon!
 
-#To-Do
+# To-Do
 - [ ] Manually extract data for SARS-CoV-2 spike glycoprotein and human ACE2
 - [ ] Parsers
 - [ ] Database server options
 - [ ] "Nice to have": Functional annotation
 
 # The Team
-Azza Ahmed @azzaea
-Erik Serrano @axiomcura
-Jeff Zahratka @jzahratka
-Olaitan Awe @laitanawe
-Ravi Abrol @raviabrol
+* Azza Ahmed @azzaea
+* Erik Serrano @axiomcura
+* Jeff Zahratka @jzahratka
+* Olaitan Awe @laitanawe
+* Ravi Abrol @raviabrol
