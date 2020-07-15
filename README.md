@@ -1,3 +1,5 @@
+![alt text](img/impetus_logo.png)
+
 # iMPEToS (interactive Membrane Protein Extended Topology on Steroids) Standard
 
 ## What are membrane proteins?
