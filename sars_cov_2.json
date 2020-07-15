@@ -1,0 +1,55 @@
+{
+    "Accession number": "P0DTC2",
+    "Entry status": "Reviewed",
+    "Protein name": {
+        "Recommended": "Spike glycoprotein",
+        "Short": "S glycoprotein",
+        "Alternative": ["E2", "Peplomer protein"]
+    },
+    "Gene name": {
+        "Name": "S",
+        "ORF": 2
+    },
+    "Organism": " Severe acute respiratory syndrome coronavirus 2 (2019-nCoV) (SARS-CoV-2)",
+    "Taxonomic identifier": {
+        "NCBI": 2697049
+    },
+    "Family": "",
+    "Taxonomic lineage": "Viruses > Riboviria > Nidovirales > Cornidovirineae > Coronaviridae > Orthocoronavirinae > Betacoronavirus > Sarbecovirus",
+    "Virus host": "Homo sapiens (Human)",
+    "Proteomes": "UP000464024 Component: Genome",
+    "uniprot sequence": "MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHVSGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPFLGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPINLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYNENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASVYAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIADYNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYFPLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFLPFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLTPTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLGAENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGIAVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDCLGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIGVTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDILSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLMSFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNTFVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVAKNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDDSEPVLKGVKLHYT",
+    "Length": 1273,
+    "Databases": {
+        "pfam": ["PF16451 bCoV_S1_N, 1 hit", "PF09408 bCoV_S1_RBD, 1 hit", "PF19209 CoV_S1_C, 1 hit", "PF01601 CoV_S2, 1 hit"],
+        "Interpro": ["IPR002552 Corona_S2", "IPR027400 S_HR2", "IPR018548 Spike_rcpt-bd", "IPR036326 Spike_rcpt-bd_sf"]
+    },
+    "Cellular component": ["Host cell membrane", "Host membrane", "Membrane", "Viral envelope protein", "Virion"],
+    "Hydrophobic position": "1214 – 1234",
+    "Transmembrane description": "Helical",
+    "Resolution": 2.8,
+    "6VXX": {
+        "A": {
+            "TMDomain": "",
+            "HPDomain": "",
+            "Stalk": "",
+            "TM length": "",
+            "HP length": ""
+        },
+        "B": {
+            "TMDomain": "",
+            "HPDomain": "",
+            "Stalk": "",
+            "TM length": "",
+            "HP length": ""
+        },
+        "C": {
+            "TMDomain": "",
+            "HPDomain": "",
+            "Stalk": "",
+            "TM length": "",
+            "HP length": ""
+        }
+    }
+
+}
