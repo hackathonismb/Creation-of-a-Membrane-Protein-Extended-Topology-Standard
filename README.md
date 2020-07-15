@@ -1,4 +1,4 @@
-# iMPETuS: A Membrane Protein Extended Topology Standard
+# iMPEToS (interactive Membrane Protein Extended Topology on Steroids) Standard
 
 ## What are membrane proteins?
 Membrane proteins (MPs) make up about one-third of the human genome, and are targets of 50% of drugs. MPs are functionally diverse, necessary for signal transduction, transport, adhesion, and many other cellular responses. Therefore, understanding MP structure is critically important for understanding biological processes and treatment of disease.
