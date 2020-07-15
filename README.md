@@ -1,4 +1,4 @@
-![iMPEToS Logo](img/impetus_logo.png)
+![iMPEToS Logo](img/impetos_logo.png)
 
 # iMPEToS (interactive Membrane Protein Extended Topology on Steroids) Standard
 
