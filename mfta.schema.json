@@ -4,22 +4,11 @@
     "type": "object",
     "title": "The root schema",
     "description": "The root schema comprises the entire JSON document.",
-
     "required": [
         "Accession_number",
         "Entery_status",
-        "Protein name",
-        "Gene name",
-        "Organism",
-        "Taxonomic identifier",
-        "Family",
-        "Taxonomic lineage",
-        "Virus host",
         "Sequence",
-        "Length",
-        "Cellular component",
-        "Hydrophobic position",
-        "Transmembrane description"
+        "pdbids"
     ],
     "additionalProperties": true,
     "properties": {
@@ -37,8 +26,8 @@
             "title": "The Entry status schema",
             "description": "From Uniprot indicating whether the entry has been manually annotated and reviewed by UniProtKB curators or not"
         },
-        "Protein name": {
-            "$id": "#/properties/Protein name",
+        "Protein_name": {
+            "$id": "#/properties/Protein_name",
             "type": "string",
             "title": "Protein name schema",
             "description": "Full name recommended by the UniProt consortium"
@@ -55,13 +44,13 @@
             "additionalProperties": true,
             "properties": {
                 "Name": {
-                    "$id": "#/properties/Gene name/properties/Name",
+                    "$id": "#/properties/Gene_name/properties/Name",
                     "type": "string",
                     "title": "The Name schema",
                     "description": "The name UniProt recommended to use to officially represent a gene (official gene symbol)"
                 },
                 "ORF": {
-                    "$id": "#/properties/Gene name/properties/ORF",
+                    "$id": "#/properties/Gene_name/properties/ORF",
                     "type": "array",
                     "title": "The ORF schema",
                     "description": "From UniProt,  list the names that are temporarily attributed to an open reading frame (ORF) by a sequencing project",
@@ -69,13 +58,13 @@
                     "items": {
                         "anyOf": [
                             {
-                                "$id": "#/properties/Gene name/properties/ORF/items/anyOf/0",
+                                "$id": "#/properties/Gene_name/properties/ORF/items/anyOf/0",
                                 "type": "string",
                                 "title": "The first anyOf schema",
                                 "description": "An explanation about the purpose of this instance."
                             }
                         ],
-                        "$id": "#/properties/Gene name/properties/ORF/items"
+                        "$id": "#/properties/Gene_name/properties/ORF/items"
                     }
                 }
             }
@@ -86,21 +75,21 @@
             "title": "The Organism schema",
             "description": "From UniProt, giving the name(s) of the organism that is the source of the protein sequence"
         },
-        "Taxonomic identifier": {
-            "$id": "#/properties/Taxonomic identifier",
+        "Taxonomic_identifier": {
+            "$id": "#/properties/Taxonomic_identifier",
             "type": "string",
             "title": "The Taxonomic identifier schema",
             "description": "From UniProt, giving the unique identifier assigned by the NCBI to the source organism of the protein",
             "pattern": "[0-9]{7}"
         },
-        "Taxonomic lineage": {
-            "$id": "#/properties/Taxonomic lineage",
+        "Taxonomic_lineage": {
+            "$id": "#/properties/Taxonomic_lineage",
             "type": "string",
             "title": "The Taxonomic lineage schema",
             "description": "From UniProt, this is the taxonomic hierarchical classification lineage of the source organism"
         },
-        "Virus host": {
-            "$id": "#/properties/Virus host",
+        "Virus_host": {
+            "$id": "#/properties/Virus_host",
             "type": "string",
             "title": "The Virus host schema",
             "description": "From UniProt, and only for viral proteins indicating their host(s) either as a specific organism or taxonomic group of organisms that are susceptible to be infected by a virus"
@@ -117,35 +106,35 @@
             "title": "The Length schema",
             "description": "From UniProt, the number of amino acids in the canonical sequence"
         },
-        "Cellular component keywords": {
-            "$id": "#/properties/Cellular component",
+        "Cellular_component keywords": {
+            "$id": "#/properties/Cellular_component",
             "type": "array",
-            "title": "The Cellular component schema",
+            "title": "The Cellular_component schema",
             "description": "From UniProt, a selection of controlled vocabulary which summarises the content of the Subcellular location",
             "additionalItems": true,
             "items": {
                 "anyOf": [
                     {
-                        "$id": "#/properties/Cellular component/items/anyOf/0",
+                        "$id": "#/properties/Cellular_component/items/anyOf/0",
                         "type": "string",
                         "title": "The first anyOf schema",
                         "description": "An explanation about the purpose of this instance."
                     }
                 ],
-                "$id": "#/properties/Cellular component/items"
+                "$id": "#/properties/Cellular_component/items"
             }
         },
-        "Hydrophobic position": {
-            "$id": "#/properties/Hydrophobic position",
+        "Hydrophobic_position": {
+            "$id": "#/properties/Hydrophobic_position",
             "type": "string",
-            "title": "The Hydrophobic position schema",
+            "title": "The Hydrophobic_position schema",
             "description": "***I took these from UniProt,  the extent of a membrane-spanning region of the protein",
             "pattern":"[0-9]?[^A-Za-z0-9]?[0-9]?"
         },
-        "Transmembrane description": {
-            "$id": "#/properties/Transmembrane description",
+        "Transmembrane_description": {
+            "$id": "#/properties/Transmembrane_description",
             "type": "string",
-            "title": "The Transmembrane description schema",
+            "title": "The Transmembrane_description schema",
             "description": "*** Also from Uniprot's table, but it is unclear how to this should be filled (eg- different tables for proteins {P0DTC2, Q9BYF1} VS {P30988, Q8RKH1, Q96BI3, Q8BQS5}.). I think the transmembrane section in the within the pdbids section over-rides this one"
         },
         "pdbids": {
