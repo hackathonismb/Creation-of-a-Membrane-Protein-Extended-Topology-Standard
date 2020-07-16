@@ -23,6 +23,10 @@ is built to cover complex cases such as proteins with "stalk" regions - transmem
 2. An iMPEToS file is generated based on available topological information
 3. Output file can be used in downstream workflows (e.g. iCn3D analysis).
 
+
+![iMPEToS Logo](img/impetos_workflow1.png)
+
+
 More detailed instructions coming soon!
 
 ## To-Do
