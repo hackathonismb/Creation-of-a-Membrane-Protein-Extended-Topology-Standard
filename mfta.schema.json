@@ -1,73 +1,10 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "http://example.com/example.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://github.com/hackathonismb/Creation-of-a-Membrane-Protein-Extended-Topology-Standard/blob/master/mfta.schema.json",
     "type": "object",
     "title": "The root schema",
     "description": "The root schema comprises the entire JSON document.",
-    "default": {},
-    "examples": [
-        {
-            "Accession number": "P0DTC2",
-            "Entry status": "Reviewed",
-            "Protein name": {
-                "Recommended": "Spike glycoprotein",
-                "Short": "S glycoprotein",
-                "Alternative": [
-                    "E2",
-                    "Peplomer protein"
-                ]
-            },
-            "Gene name": {
-                "Name": "S",
-                "ORF": 2
-            },
-            "Organism": " Severe acute respiratory syndrome coronavirus 2 (2019-nCoV) (SARS-CoV-2)",
-            "Taxonomic identifier": {
-                "NCBI": 2697049
-            },
-            "Taxonomic lineage": "Viruses > Riboviria > Nidovirales > Cornidovirineae > Coronaviridae > Orthocoronavirinae > Betacoronavirus > Sarbecovirus",
-            "Virus host": "Homo sapiens (Human)",
-            "Proteomes": "UP000464024 Component: Genome",
-            "uniprot sequence": "MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHVSGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPFLGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPINLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYNENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASVYAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIADYNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYFPLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFLPFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLTPTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLGAENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGIAVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDCLGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIGVTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDILSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLMSFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNTFVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVAKNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDDSEPVLKGVKLHYT",
-            "Length": 1273,
-            "Databases": {
-                "pfam": [
-                    "PF16451 bCoV_S1_N, 1 hit",
-                    "PF09408 bCoV_S1_RBD, 1 hit",
-                    "PF19209 CoV_S1_C, 1 hit",
-                    "PF01601 CoV_S2, 1 hit"
-                ],
-                "Interpro": [
-                    "IPR002552 Corona_S2",
-                    "IPR027400 S_HR2",
-                    "IPR018548 Spike_rcpt-bd",
-                    "IPR036326 Spike_rcpt-bd_sf"
-                ]
-            },
-            "Cellular component": [
-                "Host cell membrane",
-                "Host membrane",
-                "Membrane",
-                "Viral envelope protein",
-                "Virion"
-            ],
-            "Protein-protein interactions": {
-                "ComplexPortal": "CPX-5682 SARS-CoV-2 Spike protein complex",
-                "IntAct": "P0DTC2, 3 interactors"
-            },
-            "Transmembrane position": "1214 – 1234",
-            "Transmembrane description": "Helical",
-            "Chains": [
-                "A",
-                "B",
-                "C"
-            ],
-            "Resolution": 2.8,
-            "TMDomain": "",
-            "HPDomain": "",
-            "Stalk": "TMDomain + HPDomain"
-        }
-    ],
+
     "required": [
         "Accession number",
         "Entry status",
@@ -75,21 +12,15 @@
         "Gene name",
         "Organism",
         "Taxonomic identifier",
+        "Family",
         "Taxonomic lineage",
         "Virus host",
-        "Proteomes",
         "uniprot sequence",
         "Length",
-        "Databases",
         "Cellular component",
-        "Protein-protein interactions",
-        "Transmembrane position",
+        "Hydrophobic position",
         "Transmembrane description",
-        "Chains",
-        "Resolution",
-        "TMDomain",
-        "HPDomain",
-        "Stalk"
+        "Resolution"
     ],
     "additionalProperties": true,
     "properties": {
@@ -97,109 +28,27 @@
             "$id": "#/properties/Accession number",
             "type": "string",
             "title": "The Accession number schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "P0DTC2"
-            ]
+            "description": "UniprotKB stable identifiers. This is the Primary (citable) accession number- Secondary accession is ignored for now",
+            "pattern": "[OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9]([A-Z][A-Z0-9]{2}[0-9]){1,2}"
         },
         "Entry status": {
             "$id": "#/properties/Entry status",
             "type": "string",
+            "enum":["Reviewed", "unreviewed"],
             "title": "The Entry status schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "Reviewed"
-            ]
+            "description": "From Uniprot indicating whether the entry has been manually annotated and reviewed by UniProtKB curators or not"
         },
         "Protein name": {
             "$id": "#/properties/Protein name",
-            "type": "object",
-            "title": "The Protein name schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": {},
-            "examples": [
-                {
-                    "Recommended": "Spike glycoprotein",
-                    "Short": "S glycoprotein",
-                    "Alternative": [
-                        "E2",
-                        "Peplomer protein"
-                    ]
-                }
-            ],
-            "required": [
-                "Recommended",
-                "Short",
-                "Alternative"
-            ],
-            "additionalProperties": true,
-            "properties": {
-                "Recommended": {
-                    "$id": "#/properties/Protein name/properties/Recommended",
-                    "type": "string",
-                    "title": "The Recommended schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": "",
-                    "examples": [
-                        "Spike glycoprotein"
-                    ]
-                },
-                "Short": {
-                    "$id": "#/properties/Protein name/properties/Short",
-                    "type": "string",
-                    "title": "The Short schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": "",
-                    "examples": [
-                        "S glycoprotein"
-                    ]
-                },
-                "Alternative": {
-                    "$id": "#/properties/Protein name/properties/Alternative",
-                    "type": "array",
-                    "title": "The Alternative schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": [],
-                    "examples": [
-                        [
-                            "E2",
-                            "Peplomer protein"
-                        ]
-                    ],
-                    "additionalItems": true,
-                    "items": {
-                        "anyOf": [
-                            {
-                                "$id": "#/properties/Protein name/properties/Alternative/items/anyOf/0",
-                                "type": "string",
-                                "title": "The first anyOf schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": "",
-                                "examples": [
-                                    "E2",
-                                    "Peplomer protein"
-                                ]
-                            }
-                        ],
-                        "$id": "#/properties/Protein name/properties/Alternative/items"
-                    }
-                }
-            }
+            "type": "string",
+            "title": "Protein name schema",
+            "description": "Full name recommended by the UniProt consortium"
         },
-        "Gene name": {
+        "Gene names": {
             "$id": "#/properties/Gene name",
             "type": "object",
             "title": "The Gene name schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": {},
-            "examples": [
-                {
-                    "Name": "S",
-                    "ORF": 2
-                }
-            ],
+            "description": "From Uniprot, the name(s) of the gene(s) that code for the protein sequence(s)",
             "required": [
                 "Name",
                 "ORF"
@@ -210,21 +59,25 @@
                     "$id": "#/properties/Gene name/properties/Name",
                     "type": "string",
                     "title": "The Name schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": "",
-                    "examples": [
-                        "S"
-                    ]
+                    "description": "The name UniProt recommended to use to officially represent a gene (official gene symbol)"
                 },
                 "ORF": {
                     "$id": "#/properties/Gene name/properties/ORF",
-                    "type": "integer",
+                    "type": "array",
                     "title": "The ORF schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": 0,
-                    "examples": [
-                        2
-                    ]
+                    "description": "From UniProt,  list the names that are temporarily attributed to an open reading frame (ORF) by a sequencing project",
+                    "additionalItems": true,
+                    "items": {
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/Gene name/properties/ORF/items/anyOf/0",
+                                "type": "string",
+                                "title": "The first anyOf schema",
+                                "description": "An explanation about the purpose of this instance."
+                            }
+                        ],
+                        "$id": "#/properties/Gene name/properties/ORF/items"
+                    }
                 }
             }
         },
@@ -232,192 +85,44 @@
             "$id": "#/properties/Organism",
             "type": "string",
             "title": "The Organism schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                " Severe acute respiratory syndrome coronavirus 2 (2019-nCoV) (SARS-CoV-2)"
-            ]
+            "description": "From UniProt, giving the name(s) of the organism that is the source of the protein sequence"
         },
         "Taxonomic identifier": {
             "$id": "#/properties/Taxonomic identifier",
-            "type": "object",
+            "type": "string",
             "title": "The Taxonomic identifier schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": {},
-            "examples": [
-                {
-                    "NCBI": 2697049
-                }
-            ],
-            "required": [
-                "NCBI"
-            ],
-            "additionalProperties": true,
-            "properties": {
-                "NCBI": {
-                    "$id": "#/properties/Taxonomic identifier/properties/NCBI",
-                    "type": "integer",
-                    "title": "The NCBI schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": 0,
-                    "examples": [
-                        2697049
-                    ]
-                }
-            }
+            "description": "From UniProt, giving the unique identifier assigned by the NCBI to the source organism of the protein",
+            "pattern": "[0-9]{7}"
         },
         "Taxonomic lineage": {
             "$id": "#/properties/Taxonomic lineage",
             "type": "string",
             "title": "The Taxonomic lineage schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "Viruses > Riboviria > Nidovirales > Cornidovirineae > Coronaviridae > Orthocoronavirinae > Betacoronavirus > Sarbecovirus"
-            ]
+            "description": "From UniProt, this is the taxonomic hierarchical classification lineage of the source organism"
         },
         "Virus host": {
             "$id": "#/properties/Virus host",
             "type": "string",
             "title": "The Virus host schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "Homo sapiens (Human)"
-            ]
-        },
-        "Proteomes": {
-            "$id": "#/properties/Proteomes",
-            "type": "string",
-            "title": "The Proteomes schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "UP000464024 Component: Genome"
-            ]
+            "description": "From UniProt, and only for viral proteins indicating their host(s) either as a specific organism or taxonomic group of organisms that are susceptible to be infected by a virus"
         },
         "uniprot sequence": {
             "$id": "#/properties/uniprot sequence",
             "type": "string",
             "title": "The uniprot sequence schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHVSGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPFLGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPINLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYNENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASVYAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIADYNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYFPLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFLPFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLTPTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLGAENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGIAVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDCLGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIGVTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDILSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLMSFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNTFVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVAKNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDDSEPVLKGVKLHYT"
-            ]
+            "description": "From UniProt, canonical protein sequence data and list of described protein isoforms"
         },
         "Length": {
             "$id": "#/properties/Length",
             "type": "integer",
             "title": "The Length schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                1273
-            ]
+            "description": "From UniProt, the number of amino acids in the canonical sequence"
         },
-        "Databases": {
-            "$id": "#/properties/Databases",
-            "type": "object",
-            "title": "The Databases schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": {},
-            "examples": [
-                {
-                    "pfam": [
-                        "PF16451 bCoV_S1_N, 1 hit",
-                        "PF09408 bCoV_S1_RBD, 1 hit",
-                        "PF19209 CoV_S1_C, 1 hit",
-                        "PF01601 CoV_S2, 1 hit"
-                    ],
-                    "Interpro": [
-                        "IPR002552 Corona_S2",
-                        "IPR027400 S_HR2",
-                        "IPR018548 Spike_rcpt-bd",
-                        "IPR036326 Spike_rcpt-bd_sf"
-                    ]
-                }
-            ],
-            "required": [
-                "pfam",
-                "Interpro"
-            ],
-            "additionalProperties": true,
-            "properties": {
-                "pfam": {
-                    "$id": "#/properties/Databases/properties/pfam",
-                    "type": "array",
-                    "title": "The pfam schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": [],
-                    "examples": [
-                        [
-                            "PF16451 bCoV_S1_N, 1 hit",
-                            "PF09408 bCoV_S1_RBD, 1 hit"
-                        ]
-                    ],
-                    "additionalItems": true,
-                    "items": {
-                        "anyOf": [
-                            {
-                                "$id": "#/properties/Databases/properties/pfam/items/anyOf/0",
-                                "type": "string",
-                                "title": "The first anyOf schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": "",
-                                "examples": [
-                                    "PF16451 bCoV_S1_N, 1 hit",
-                                    "PF09408 bCoV_S1_RBD, 1 hit"
-                                ]
-                            }
-                        ],
-                        "$id": "#/properties/Databases/properties/pfam/items"
-                    }
-                },
-                "Interpro": {
-                    "$id": "#/properties/Databases/properties/Interpro",
-                    "type": "array",
-                    "title": "The Interpro schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": [],
-                    "examples": [
-                        [
-                            "IPR002552 Corona_S2",
-                            "IPR027400 S_HR2"
-                        ]
-                    ],
-                    "additionalItems": true,
-                    "items": {
-                        "anyOf": [
-                            {
-                                "$id": "#/properties/Databases/properties/Interpro/items/anyOf/0",
-                                "type": "string",
-                                "title": "The first anyOf schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": "",
-                                "examples": [
-                                    "IPR002552 Corona_S2",
-                                    "IPR027400 S_HR2"
-                                ]
-                            }
-                        ],
-                        "$id": "#/properties/Databases/properties/Interpro/items"
-                    }
-                }
-            }
-        },
-        "Cellular component": {
+        "Cellular component keywords": {
             "$id": "#/properties/Cellular component",
             "type": "array",
             "title": "The Cellular component schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": [],
-            "examples": [
-                [
-                    "Host cell membrane",
-                    "Host membrane"
-                ]
-            ],
+            "description": "From UniProt, a selection of controlled vocabulary which summarises the content of the Subcellular location",
             "additionalItems": true,
             "items": {
                 "anyOf": [
@@ -425,146 +130,29 @@
                         "$id": "#/properties/Cellular component/items/anyOf/0",
                         "type": "string",
                         "title": "The first anyOf schema",
-                        "description": "An explanation about the purpose of this instance.",
-                        "default": "",
-                        "examples": [
-                            "Host cell membrane",
-                            "Host membrane"
-                        ]
+                        "description": "An explanation about the purpose of this instance."
                     }
                 ],
                 "$id": "#/properties/Cellular component/items"
             }
         },
-        "Protein-protein interactions": {
-            "$id": "#/properties/Protein-protein interactions",
-            "type": "object",
-            "title": "The Protein-protein interactions schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": {},
-            "examples": [
-                {
-                    "ComplexPortal": "CPX-5682 SARS-CoV-2 Spike protein complex",
-                    "IntAct": "P0DTC2, 3 interactors"
-                }
-            ],
-            "required": [
-                "ComplexPortal",
-                "IntAct"
-            ],
-            "additionalProperties": true,
-            "properties": {
-                "ComplexPortal": {
-                    "$id": "#/properties/Protein-protein interactions/properties/ComplexPortal",
-                    "type": "string",
-                    "title": "The ComplexPortal schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": "",
-                    "examples": [
-                        "CPX-5682 SARS-CoV-2 Spike protein complex"
-                    ]
-                },
-                "IntAct": {
-                    "$id": "#/properties/Protein-protein interactions/properties/IntAct",
-                    "type": "string",
-                    "title": "The IntAct schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": "",
-                    "examples": [
-                        "P0DTC2, 3 interactors"
-                    ]
-                }
-            }
-        },
-        "Transmembrane position": {
-            "$id": "#/properties/Transmembrane position",
+        "Hydrophobic position": {
+            "$id": "#/properties/Hydrophobic position",
             "type": "string",
-            "title": "The Transmembrane position schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "1214 – 1234"
-            ]
+            "title": "The Hydrophobic position schema",
+            "description": "An explanation about the purpose of this instance."
         },
         "Transmembrane description": {
             "$id": "#/properties/Transmembrane description",
             "type": "string",
             "title": "The Transmembrane description schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "Helical"
-            ]
-        },
-        "Chains": {
-            "$id": "#/properties/Chains",
-            "type": "array",
-            "title": "The Chains schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": [],
-            "examples": [
-                [
-                    "A",
-                    "B"
-                ]
-            ],
-            "additionalItems": true,
-            "items": {
-                "anyOf": [
-                    {
-                        "$id": "#/properties/Chains/items/anyOf/0",
-                        "type": "string",
-                        "title": "The first anyOf schema",
-                        "description": "An explanation about the purpose of this instance.",
-                        "default": "",
-                        "examples": [
-                            "A",
-                            "B"
-                        ]
-                    }
-                ],
-                "$id": "#/properties/Chains/items"
-            }
+            "description": "An explanation about the purpose of this instance."
         },
         "Resolution": {
             "$id": "#/properties/Resolution",
             "type": "number",
             "title": "The Resolution schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0.0,
-            "examples": [
-                2.8
-            ]
-        },
-        "TMDomain": {
-            "$id": "#/properties/TMDomain",
-            "type": "string",
-            "title": "The TMDomain schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                ""
-            ]
-        },
-        "HPDomain": {
-            "$id": "#/properties/HPDomain",
-            "type": "string",
-            "title": "The HPDomain schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                ""
-            ]
-        },
-        "Stalk": {
-            "$id": "#/properties/Stalk",
-            "type": "string",
-            "title": "The Stalk schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "TMDomain + HPDomain"
-            ]
+            "description": "An explanation about the purpose of this instance."
         }
     }
 }
