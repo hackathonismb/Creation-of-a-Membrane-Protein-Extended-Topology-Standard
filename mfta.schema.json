@@ -19,8 +19,7 @@
         "Length",
         "Cellular component",
         "Hydrophobic position",
-        "Transmembrane description",
-        "Resolution"
+        "Transmembrane description"
     ],
     "additionalProperties": true,
     "properties": {
@@ -140,19 +139,143 @@
             "$id": "#/properties/Hydrophobic position",
             "type": "string",
             "title": "The Hydrophobic position schema",
-            "description": "An explanation about the purpose of this instance."
+            "description": "***I took these from UniProt,  the extent of a membrane-spanning region of the protein",
+            "pattern":"[0-9]?[^A-Za-z0-9]?[0-9]?"
         },
         "Transmembrane description": {
             "$id": "#/properties/Transmembrane description",
             "type": "string",
             "title": "The Transmembrane description schema",
-            "description": "An explanation about the purpose of this instance."
+            "description": "*** Also from Uniprot's table, but it is unclear how to this should be filled (eg- different tables for proteins {P0DTC2, Q9BYF1} VS {P30988, Q8RKH1, Q96BI3, Q8BQS5}.). I think the transmembrane section in the within the pdbids section over-rides this one"
         },
-        "Resolution": {
-            "$id": "#/properties/Resolution",
-            "type": "number",
-            "title": "The Resolution schema",
-            "description": "An explanation about the purpose of this instance."
+        "pdbids": {
+            "$id": "#/properties/pdbids",
+            "type": "array",
+            "title": "The pdbids schema",
+            "description": "This section constitutes the relevant membrane structure information, arranged by PDB IDs",
+            "additionalItems": true,
+            "items": {
+                "anyOf": [
+                    {
+                        "$id": "#/properties/pdbids/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "This is an array of pdb_ids and their corresponding chains",
+                        "required": [
+                            "pdb_id",
+                            "chains"
+                        ],
+                        "additionalProperties": true,
+                        "properties": {
+                            "pdb_id": {
+                                "$id": "#/properties/pdbids/items/anyOf/0/properties/pdb_id",
+                                "type": "string",
+                                "title": "The pdb_id schema",
+                                "description": "A PDB ID retrieved from RCSB corresponding to the protein's accession obtained from UniProt"
+                            },
+                            "chains": {
+                                "$id": "#/properties/pdbids/items/anyOf/0/properties/chains",
+                                "type": "array",
+                                "title": "The chains schema",
+                                "description": "An array of polypeptide chains present in the mature protein (and their corresponding membrane features)",
+                                "additionalItems": true,
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "$id": "#/properties/pdbids/items/anyOf/0/properties/chains/items/anyOf/0",
+                                            "type": "object",
+                                            "title": "The first anyOf schema",
+                                            "description": "Pairing chains and their data",
+                                            "required": [
+                                                "chain",
+                                                "data"
+                                            ],
+                                            "additionalProperties": true,
+                                            "properties": {
+                                                "chain": {
+                                                    "$id": "#/properties/pdbids/items/anyOf/0/properties/chains/items/anyOf/0/properties/chain",
+                                                    "type": "string",
+                                                    "title": "The chain schema",
+                                                    "description": "The polypeptide chain name, retrieved from RCSB"
+                                                },
+                                                "data": {
+                                                    "$id": "#/properties/pdbids/items/anyOf/0/properties/chains/items/anyOf/0/properties/data",
+                                                    "type": "object",
+                                                    "title": "The data schema",
+                                                    "description": "The membrane features within the specific chain",
+                                                    "required": [
+                                                        "pdbsequence",
+                                                        "head_domain",
+                                                        "hinge_domain",
+                                                        "stalk_domain",
+                                                        "neck_domain",
+                                                        "transmembrane",
+                                                        "cytoplasmic"
+                                                    ],
+                                                    "additionalProperties": true,
+                                                    "properties": {
+                                                        "pdbsequence": {
+                                                            "$id": "#/properties/pdbids/items/anyOf/0/properties/chains/items/anyOf/0/properties/data/properties/pdbsequence",
+                                                            "type": "string",
+                                                            "title": "The pdbsequence schema",
+                                                            "description": "From RCSB, this is the sequence of the specific chain"
+                                                        },
+                                                        "head_domain": {
+                                                            "$id": "#/properties/pdbids/items/anyOf/0/properties/chains/items/anyOf/0/properties/data/properties/head_domain",
+                                                            "type": "string",
+                                                            "title": "The head_domain schema",
+                                                            "description": "the protein's head domain calculated from pdb file and annotations in PDBTM, OPM or similar database",
+                                                            "pattern":"[0-9]?[^A-Za-z0-9]?[0-9]?"
+                                                        },
+                                                        "hinge_domain": {
+                                                            "$id": "#/properties/pdbids/items/anyOf/0/properties/chains/items/anyOf/0/properties/data/properties/hinge_domain",
+                                                            "type": "string",
+                                                            "title": "The hinge_domain schema",
+                                                            "description": "For now, defined as Approx residue range",
+                                                            "pattern":"[0-9]?[^A-Za-z0-9]?[0-9]?"
+                                                        },
+                                                        "stalk_domain": {
+                                                            "$id": "#/properties/pdbids/items/anyOf/0/properties/chains/items/anyOf/0/properties/data/properties/stalk_domain",
+                                                            "type": "string",
+                                                            "title": "The stalk_domain schema",
+                                                            "description": "calculated as the difference between the TM domain (the extended helix, retrieved from PDB structure) and Hydrophobic regions (retrieved from OPM/PDBTM)",
+                                                            "pattern":"[0-9]?[^A-Za-z0-9]?[0-9]?"
+                                                        },
+                                                        "neck_domain": {
+                                                            "$id": "#/properties/pdbids/items/anyOf/0/properties/chains/items/anyOf/0/properties/data/properties/neck_domain",
+                                                            "type": "string",
+                                                            "title": "The neck_domain schema",
+                                                            "description": "I think this domain is what remains from the protein taking out the stalk and head domains- correct if wrong!",
+                                                            "pattern":"[0-9]?[^A-Za-z0-9]?[0-9]?"
+                                                        },
+                                                        "transmembrane": {
+                                                            "$id": "#/properties/pdbids/items/anyOf/0/properties/chains/items/anyOf/0/properties/data/properties/transmembrane",
+                                                            "type": "string",
+                                                            "title": "The transmembrane schema",
+                                                            "description": "Not sure what this is, but probably this is the right place for the starred entries atop the schema",
+                                                            "pattern":"[0-9]?[^A-Za-z0-9]?[0-9]?"
+                                                        },
+                                                        "cytoplasmic": {
+                                                            "$id": "#/properties/pdbids/items/anyOf/0/properties/chains/items/anyOf/0/properties/data/properties/cytoplasmic",
+                                                            "type": "string",
+                                                            "title": "The cytoplasmic schema",
+                                                            "description": "Erik: some explanation of how this is retrieved is needed please!",
+                                                            "pattern":"[0-9]?[^A-Za-z0-9]?[0-9]?"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "$id": "#/properties/pdbids/items/anyOf/0/properties/chains/items"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "$id": "#/properties/pdbids/items"
+            }
         }
+
     }
 }
