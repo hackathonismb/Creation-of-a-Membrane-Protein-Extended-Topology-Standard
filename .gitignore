@@ -1,0 +1,5 @@
+mfta/parser/__pycache__/parseXML.cpython-37.pyc
+*.pyc
+.vscode/settings.json
+test.ipynb
+.ipynb_checkpoints/test-checkpoint.ipynb
